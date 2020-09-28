@@ -1,0 +1,10 @@
+<% provide :title, t("static_pages.users.all_user") %>
+<h1><%= t "static_pages.users.all_user" %></h1>
+
+<%= paginate @users, theme: Settings.paginate_theme %>
+
+<ul class="users">
+  <%= render @users %>
+</ul>
+
+<%= paginate @users, theme: Settings.paginate_theme %>

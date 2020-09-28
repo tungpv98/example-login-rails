@@ -1,0 +1,14 @@
+vi:
+  static_pages:
+    home:
+      title: "Trang chu | Ung dung mau huong dan Ruby on Rails"
+      app_name: "Ung dung mau"
+      intro: "Day la trang chu cua"
+      book: "Sach huong dan Ruby on Rails"
+      end_page: "ung dung mau."
+    help:
+      title: "Help | | Ruby on Rails Tutorial Sample App"
+      app_name: "Simple App"
+      intro: "This is the home page for the"
+      book: "Ruby on Rails Tutorial"
+      end_page: "sample application."

@@ -1,0 +1,25 @@
+tutorial: "https://www.railstutorial.org/"
+book: "https://www.railstutorial.org/book"
+screencast: "http://screencasts.railstutorial.org/"
+development: "http://rubyonrails.org/"
+help: "https://www.railstutorial.org/help"
+rails_img: "rails.png"
+kitten_img: "kitten.jpg"
+author_url: "http://www.michaelhartl.com/"
+contact_url: "https://www.railstutorial.org/contact"
+rails_new_url: "http://news.railstutorial.org/"
+gavatar_url: "http://gravatar.com/emails"
+from_mail: "noreply@example.com"
+email_regex: !ruby/regexp '/\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i'
+email_maximum: 255
+email_minimum: 6
+pass_minimum: 6
+name_maximum: 50
+size: 80
+paginates_per : 10
+avatar_size: 50
+avatar_mini_size: 30
+micropost_maximum: 140
+paginate_theme: "twitter-bootstrap-3"
+extension_whitelist: ["jpg", "jpeg", "gif", "png"]
+img_maximum: 1

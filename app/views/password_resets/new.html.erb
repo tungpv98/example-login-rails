@@ -1,0 +1,13 @@
+<% provide :title, t("views.password_reset.title") %>
+<h1><%= t "views.password_reset.title" %></h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for :password_reset, url: password_resets_path do |f| %>
+      <%= f.label :email, value: t("static_pages.form_edit.email") %>
+      <%= f.email_field :email, class: "form-control" %>
+
+      <%= f.submit t("views.password_reset.submit"), class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
