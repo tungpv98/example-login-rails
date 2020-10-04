@@ -118,6 +118,7 @@ en:
     form_edit:
       err_mess: "shared/error_messages"
       name: "Name"
+      user_name: "User name"
       email: "Email"
       pass: "Password"
       pass_confirm: "Password Confirmation"

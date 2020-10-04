@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  USER_PARAMS = %i(name email password password_confirmation).freeze
+  USER_PARAMS = %i[name user_name email password password_confirmation].freeze
 
   has_many :microposts, dependent: :destroy
   has_many :active_relationships, class_name: Relationship.name, foreign_key: "follower_id", dependent: :destroy
@@ -12,10 +12,13 @@ class User < ApplicationRecord
   before_save :downcase_email
   before_create :create_activation_digest
 
-  validates :password, presence: true, length: {minimum: Settings.pass_minimum}, allow_nil: true
+  validates :password, presence: true, length: {minimum: Settings.pass_minimum},
+            format: {with: Settings.password_regex}, allow_nil: true
+
   validates :name, presence: true, length: {maximum: Settings.name_maximum}
   validates :email, presence: true, length: {maximum: Settings.email_maximum},
-    format: {with: Settings.email_regex}, uniqueness: {case_sensitive: false}
+            format: {with: Settings.email_regex}, uniqueness: {case_sensitive: false}
+  validates :user_name, presence: true, format: {with: Settings.username_regex}, uniqueness: {case_sensitive: false}
 
   has_secure_password
 

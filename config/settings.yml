@@ -11,6 +11,8 @@ rails_new_url: "http://news.railstutorial.org/"
 gavatar_url: "http://gravatar.com/emails"
 from_mail: "noreply@example.com"
 email_regex: !ruby/regexp '/\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i'
+username_regex: !ruby/regexp '/\A[a-z0-9_]{4,16}\z/'
+password_regex: !ruby/regexp '/\A^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{8,}$\z/i'
 email_maximum: 255
 email_minimum: 6
 pass_minimum: 6
@@ -23,3 +25,6 @@ micropost_maximum: 140
 paginate_theme: "twitter-bootstrap-3"
 extension_whitelist: ["jpg", "jpeg", "gif", "png"]
 img_maximum: 1
+smtp_port: 587
+smtp_address: "smtp.gmail.com"
+plain: "plain"

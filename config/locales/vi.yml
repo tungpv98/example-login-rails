@@ -12,3 +12,8 @@ vi:
       intro: "This is the home page for the"
       book: "Ruby on Rails Tutorial"
       end_page: "sample application."
+    form_edit:
+      user_name: ""
+      name: ""
+    signup:
+      title: ""
